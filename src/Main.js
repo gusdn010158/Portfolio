@@ -1,42 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-// import { AiOutlineFileZip } from "react-icons/ai";
+import { AiOutlineFileZip } from "react-icons/ai";
+import logo from "./img/logo.png";
 function Main(props) {
   return (
     <div>
       <Maintop>
         <Top>
-          <Logo>Logo</Logo>
+          <Logo>
+            <Limg src={logo} />
+          </Logo>
           <Abouttop>
-            <div>about</div>
-            <SS>
-              This is a page that represents the introduction, skills, and
-              vision of me.
-            </SS>
+            <Bigfont>About</Bigfont>
+            <SS>page represents the introduction, skills, and vision of me.</SS>
           </Abouttop>
           <Big>
-            <div>collaborative project</div>
+            <Bigfont>Team Project</Bigfont>
             <SS>
-              This page introduces collaborative projects with team members.
+              This page introduces collaborative projects <br /> with team
+              members.
             </SS>
           </Big>
           <Small>
-            <div>private project</div>
+            <Bigfont>Private Project</Bigfont>
             <SS>
-              This page is about a personal project that I personally covered.
+              This page is about a personal project that <br /> I personally
+              covered.
             </SS>
           </Small>
           <Soge>
-            Front-End <br />
-            Developer
+            <Bigfont>Front-End</Bigfont>
+            <div> Developer</div>
           </Soge>
         </Top>
         <Pro>
-          <div>
-            icon
-            {/* <AiOutlineFileZip /> */}
-          </div>
+          <Proicon>
+            <AiOutlineFileZip />
+          </Proicon>
           <Prorg>
             <span>HyunWoo's</span>
             <Prospan>PORTFOLIO </Prospan>
@@ -44,7 +45,9 @@ function Main(props) {
         </Pro>
       </Maintop>
       <ShowMore>쇼모얼</ShowMore>
-      <Intro>인트로</Intro>
+      <Intro>
+        <Intext>Do you want to see more?</Intext>
+      </Intro>
       <Skill>스킬</Skill>
     </div>
   );
@@ -58,8 +61,31 @@ export default Main;
 //   overflow: hidden;
 //   overflow-y: auto;
 // `;
+const Intext = styled.div`
+  width: 700px;
+  font-size: 150px;
+  font-weight: 900;
+`;
+const Limg = styled.img`
+  width: 200px;
+  height: 150px;
+`;
+const Bigfont = styled.div`
+  font-size: 45px;
+`;
+const Proicon = styled.div`
+  font-size: 230px;
+  width: 370px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 const SS = styled.div`
-  font-size: 16px;
+  font-size: 14px;
+  display: flex;
+
+  text-align: left;
 `;
 const Top = styled.div`
   display: flex;
@@ -69,6 +95,7 @@ const Prorg = styled.div`
   font-size: 60px;
   height: 400px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 `;
 const Pro = styled.div`
@@ -80,21 +107,29 @@ const Prospan = styled.span`
 `;
 const Header = styled.div`
   color: white;
+  margin-right: 50px;
   width: 300px;
   height: 200px;
   font-size: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
+
   flex-direction: column;
 `;
 
 const Logo = styled(Header)`
-  margin-right: 350px;
+  margin-right: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Soge = styled(Header)``;
-const Abouttop = styled(Header)``;
-const Big = styled(Header)``;
+const Abouttop = styled(Header)`
+  width: 230px;
+`;
+const Big = styled(Header)`
+  width: 300px;
+`;
 const Small = styled(Header)``;
 
 const Component = styled.div`
@@ -104,7 +139,10 @@ const Component = styled.div`
 const Skill = styled(Component)``;
 
 const Intro = styled(Component)`
-  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-image: url("https://img.lovepik.com/bg/20240506/Stunning-3D-Render-Background-of-Web-Design-Screen-on-Laptop_9879317_wh860.jpg!/fw/860");
 `;
 const Maintop = styled(Component)`
   background-color: black;
