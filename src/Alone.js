@@ -70,10 +70,14 @@ const PPin = styled.div`
   height: 80vh;
   width: 90vw;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 const PPright = styled.div`
-  width: 50%;
+  width: 40%;
 `;
 const PPleft = styled.div`
-  width: 50%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 `;
