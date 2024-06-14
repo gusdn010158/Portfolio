@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -6,12 +6,67 @@ import Top from "./Top";
 import Intro from "./Intro";
 
 function Main(props) {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target); // 요소가 보이면 더 이상 관찰하지 않음
+        }
+      });
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  const sentence = "Do you:want to:see more?";
+  const words = sentence.split(":");
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const child = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <div>
       <Top />
       <Intro />
-      <Intr>
-        <Intext>Do you want to see more?</Intext>
+      <Intr ref={ref}>
+        <Intext
+          as={motion.div}
+          variants={container}
+          initial="hidden"
+          animate={visible ? "visible" : "hidden"}
+        >
+          {words.map((word, index) => (
+            <motion.span key={index} variants={child}>
+              {word}
+            </motion.span>
+          ))}
+        </Intext>
       </Intr>
       <Skill>
         <Skilld>
@@ -35,22 +90,19 @@ function Main(props) {
 }
 
 export default Main;
-// const Box = styled(motion.div)`
-//   margin: 0;
-//   padding: 0;
-//   background: antiquewhite;
-//   overflow: hidden;
-//   overflow-y: auto;
-// `;
+
 const Skillh2 = styled.h2`
   font-size: 40px;
   margin: 0;
 `;
 
 const Intext = styled.div`
-  width: 700px;
+  width: 750px;
   font-size: 150px;
   font-weight: 900;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Component = styled.div`

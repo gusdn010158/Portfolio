@@ -22,3 +22,66 @@
   transform: translate(-50%, -50%); /* 텍스트를 화면 중앙에 배치 */
   pointer-events: none; /* 텍스트가 클릭되지 않도록 설정 */
 }
+.d {
+  position: absolute;
+  width: 40%;
+  left: -40%;
+}
+.d.o {
+  transition: all 1s;
+  left: 5%;
+}
+.di {
+  position: absolute;
+  width: 40%;
+  left: -40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+.di.t {
+  transition: all 3s;
+  opacity: 1;
+  left: 5%;
+}
+.did {
+  position: absolute;
+  width: 40%;
+  left: -40%;
+}
+.did.a {
+  transition: all 1s;
+  left: 5%;
+}
+
+.d2 {
+  position: absolute;
+  width: 40%;
+  right: -40%;
+}
+.d2.o {
+  transition: all 1s;
+  right: 5%;
+}
+.di2 {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: -40%;
+}
+.di2.t {
+  transition: all 1s;
+  right: 5%;
+}
+.did2 {
+  position: absolute;
+  width: 40%;
+  right: -40%;
+}
+.did2.a {
+  transition: all 1s;
+  right: 5%;
+}
