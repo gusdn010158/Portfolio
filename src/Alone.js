@@ -1,11 +1,12 @@
 import React from "react";
 import Top from "./Top";
 import styled from "styled-components";
+import Intro from "./Intro";
 function Alone(props) {
   return (
     <>
       <Top />
-
+      <Intro />
       <PP>
         <PPin>
           <PPleft>
