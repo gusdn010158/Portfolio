@@ -1,135 +1,3 @@
-// import React from "react";
-// import styled from "styled-components";
-// import logo from "./img/logo.png";
-// import { Link } from "react-router-dom";
-// import { AiOutlineFileZip } from "react-icons/ai";
-// function Top(props) {
-//   return (
-//     <Maintop>
-//       <Tope>
-//         <Logo>
-//           <Limg src={logo} />
-//         </Logo>
-//         <Abouttop to="/">
-//           <Bigfont>About</Bigfont>
-//           <SS>page represents the introduction, skills, and vision of me.</SS>
-//         </Abouttop>
-//         <Big to="/Collabo">
-//           <Bigfont>Team Project</Bigfont>
-//           <SS>
-//             This page introduces collaborative projects <br /> with team
-//             members.
-//           </SS>
-//         </Big>
-//         <Small to="/Alone">
-//           <Bigfont>Private Project</Bigfont>
-//           <SS>
-//             This page is about a personal project that <br /> I personally
-//             covered.
-//           </SS>
-//         </Small>
-//         <Soge>
-//           <Bigfont>Front-End</Bigfont>
-//           <Bigfont> Developer</Bigfont>
-//         </Soge>
-//       </Tope>
-//       <Pro>
-//         <Proicon>
-//           <AiOutlineFileZip />
-//         </Proicon>
-//         <Prorg>
-//           <span>HyunWoo's</span>
-//           <Prospan>PORTFOLIO </Prospan>
-//         </Prorg>
-//       </Pro>
-//     </Maintop>
-//   );
-// }
-
-// export default Top;
-// const Component = styled.div`
-//   height: 100vh;
-//   width: 99vw;
-// `;
-// const Maintop = styled(Component)`
-//   background-color: black;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// `;
-// const Proicon = styled.div`
-//   font-size: 230px;
-//   width: 370px;
-//   height: 400px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-// const Prorg = styled.div`
-//   color: white;
-//   font-size: 60px;
-//   font-weight: 700;
-//   height: 400px;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-// `;
-// const Pro = styled.div`
-//   color: white;
-//   display: flex;
-// `;
-// const Prospan = styled.span`
-//   font-size: 130px;
-//   font-weight: 900;
-// `;
-// const Header = styled(Link)`
-//   text-decoration: none;
-//   color: white;
-//   margin-right: 50px;
-//   width: 300px;
-//   height: 200px;
-//   font-size: 30px;
-//   display: flex;
-//   justify-content: center;
-
-//   flex-direction: column;
-// `;
-
-// const Logo = styled(Header)`
-//   margin-right: 250px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
-// const Soge = styled(Header)`
-//   margin-left: 80px;
-//   margin-right: 0;
-// `;
-// const Abouttop = styled(Header)`
-//   width: 230px;
-// `;
-// const Big = styled(Header)`
-//   width: 300px;
-// `;
-// const Small = styled(Header)``;
-
-// const SS = styled.div`
-//   font-size: 14px;
-//   display: flex;
-
-//   text-align: left;
-// `;
-// const Tope = styled.div`
-//   display: flex;
-// `;
-// const Limg = styled.img`
-//   width: 200px;
-//   height: 150px;
-// `;
-// const Bigfont = styled.div`
-//   font-size: 45px;
-// `;
 import React from "react";
 import styled from "styled-components";
 import logo from "./img/logo.png";
@@ -254,7 +122,7 @@ const Bigfont = styled.div`
   font-size: 45px;
 `;
 
-function Top(props) {
+function Top({ title }) {
   return (
     <Maintop>
       <StyledCanvas>
@@ -293,7 +161,7 @@ function Top(props) {
         </Proicon>
         <Prorg>
           <span>HyunWoo's</span>
-          <Prospan>PORTFOLIO </Prospan>
+          <Prospan>{title} </Prospan>
         </Prorg>
       </Pro>
     </Maintop>

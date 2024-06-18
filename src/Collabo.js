@@ -34,11 +34,14 @@ function Collabo(props) {
       });
     };
   }, [visibleStates]);
+  const sentence =
+    "leramleramleramleramleramlera mleramleramleramleramleramleraml eramleramleramleramleramleramleramlera mleramleram";
+  const title = "Team Project";
 
   return (
     <>
-      <Top />
-      <Intro />
+      <Top title={title} />
+      <Intro sentence={sentence} />
       <PP>
         <PPin>
           <div
