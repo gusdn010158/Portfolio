@@ -46,7 +46,7 @@ function Alone(props) {
             className={`d ${visibleStates[0] ? "o" : ""}`}
             ref={(el) => (targetsRef.current[0] = el)}
           >
-            <img
+            <Pimg
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
@@ -76,7 +76,7 @@ function Alone(props) {
             className={`di2 ${visibleStates[3] ? "t" : ""}`}
             ref={(el) => (targetsRef.current[3] = el)}
           >
-            <img
+            <Pimg
               src="https://flexible.img.hani.co.kr/flexible/normal/550/307/imgdb/original/2024/0303/20240303501097.jpg"
               alt="1"
             />
@@ -90,7 +90,7 @@ function Alone(props) {
             className={`did ${visibleStates[4] ? "a" : ""}`}
             ref={(el) => (targetsRef.current[4] = el)}
           >
-            <img
+            <Pimg
               src="https://amunt.kr/files/attach/images/856721/340/874/e0b2c13a73c98afc8d004b982b9bb802.jpg"
               alt="1"
             />
@@ -111,17 +111,20 @@ function Alone(props) {
 }
 
 export default Alone;
-
+const Pimg = styled.img`
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+`;
 const PP = styled.div`
   height: 100vh;
   width: 99vw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 `;
 
 const PPin = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;

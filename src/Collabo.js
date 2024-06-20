@@ -57,7 +57,7 @@ function Collabo(props) {
             className={`d2 ${visibleStates[1] ? "o" : ""}`}
             ref={(el) => (targetsRef.current[1] = el)}
           >
-            <img
+            <Pimg
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
@@ -71,7 +71,7 @@ function Collabo(props) {
             className={`di ${visibleStates[2] ? "t" : ""}`}
             ref={(el) => (targetsRef.current[2] = el)}
           >
-            <img
+            <Pimg
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
@@ -102,7 +102,7 @@ function Collabo(props) {
             className={`did2 ${visibleStates[5] ? "a" : ""}`}
             ref={(el) => (targetsRef.current[5] = el)}
           >
-            <img
+            <Pimg
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
@@ -115,7 +115,11 @@ function Collabo(props) {
 }
 
 export default Collabo;
-
+const Pimg = styled.img`
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+`;
 const PP = styled.div`
   height: 100vh;
   width: 99vw;

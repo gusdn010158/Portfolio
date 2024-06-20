@@ -4,7 +4,22 @@ import { motion } from "framer-motion";
 
 import Top from "./Top";
 import Intro from "./Intro";
-
+const skills = [
+  "NEXT.JS",
+  "HTML5",
+  "CSS3",
+  "TYPESCRIPT",
+  "JAVASCRIPT",
+  "REACT",
+  "REDUX",
+  "RECOIL",
+  "REACT HOOK FORM",
+  "FIGMA",
+  "GITHUB",
+  "STYLED COMPONENTS",
+  "Three.js",
+  "framer-motion",
+];
 function Main(props) {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
@@ -52,6 +67,24 @@ function Main(props) {
     },
   };
   const title = "PORTFOLIO";
+
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div>
       <Top title={title} />
@@ -71,21 +104,41 @@ function Main(props) {
         </Intext>
       </Intr>
       <Skill>
-        <Skilld>
-          <Skillh2>MY SKILL</Skillh2>
-          <div>NEXT.JS</div>
-          <div>HTML5</div>
-          <div>CSS3</div>
-          <div>TYPESCRPIT</div>
-          <div>JAVASCRPIT</div>
-          <div>REACT</div>
-          <div>REDUX</div>
-          <div>RECOIL</div>
-          <div>REACT HOOK FORM</div>
-          <div>FIGMA</div>
-          <div>GITHUB</div>
-          <div>STYLED COMPONENTS</div>
-        </Skilld>
+        <motion.div
+          className="skill-container"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.h2 variants={itemVariants}>MY SKILLS</motion.h2>
+          {skills.map((skill, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              {skill}
+            </motion.div>
+          ))}
+          <style jsx>{`
+            .skill-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 20px;
+              background: #f0f0f0;
+              border-radius: 10px;
+              max-width: 400px;
+              margin: 0 auto;
+            }
+            h2 {
+              margin-bottom: 20px;
+              font-size: 24px;
+              color: #333;
+            }
+            div {
+              margin: 5px 0;
+              font-size: 18px;
+              color: #555;
+            }
+          `}</style>
+        </motion.div>
       </Skill>
     </div>
   );
