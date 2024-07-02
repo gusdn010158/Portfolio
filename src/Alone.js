@@ -8,7 +8,7 @@ function Alone(props) {
   const [visibleStates, setVisibleStates] = useState([]);
   const targetsRef = useRef([]);
   const sentence =
-    "2qdqdqdfsfsfergghaerhejtreefaf dasdfFEWFGEFDSDFSADFA ASFFWEQFSEFQAWFSDFSDF";
+    "여기는 제가 개인적으로 만들었던 페이지이고 제가 만들어보고 싶었던 페이지들 입니다. 여기 개인 페이지는 주로 뭐뭐를 사용했고 무슨 기술을 사용했으며 거기서 무엇을 느꼈고 어떤 것이 숙달되었습니다.개인적으로 제가 하고 싶은 걸 하다보니 다양한 기술을 찾아서 적용시켜보고 이를 통해 구글링과 다양한 라이브러리를 적용하는 방법을 알게 된거같습니다.";
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const newVisibleStates = [...visibleStates];

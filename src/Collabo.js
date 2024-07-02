@@ -35,7 +35,7 @@ function Collabo(props) {
     };
   }, [visibleStates]);
   const sentence =
-    "leramleramleramleramleramlera mleramleramleramleramleramleraml eramleramleramleramleramleramleramlera mleramleram";
+    "이 페이지는 제가 팀 프로젝트를 했을때 어떤 것을 했고 어떤 것을 느꼈는지에 대해 적혀있는 페이지입니다. 이 팀페이지들은 혼자가 아니라 다양한 프론트엔드 백엔드 디자이너등 다양한 사람과 다양한 생각이 하나로 협력되는데 큰 노력이 필요하다는 걸 알게 되었고 개발 외에도 커뮤니케이션이 중요하다는 것을 알게 된게 많은 팀 프로젝트들 입니다.";
   const title = "Team Project";
 
   return (
@@ -72,7 +72,7 @@ function Collabo(props) {
             ref={(el) => (targetsRef.current[2] = el)}
           >
             <Pimg
-              src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
+              src="https://elearningindustry.com/wp-content/uploads/2023/06/4-Caveats-For-LD-Professionals-When-Using-Chat-GPT.jpg"
               alt="1"
             />
             MOMUKG
@@ -103,7 +103,7 @@ function Collabo(props) {
             ref={(el) => (targetsRef.current[5] = el)}
           >
             <Pimg
-              src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
+              src="https://cdn.mediatoday.co.kr/news/photo/202210/306491_419306_625.png"
               alt="1"
             />
             헬린이 쇼핑몰

@@ -310,13 +310,13 @@ function Top({ title }) {
   const [delay7, setDelay7] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setDelay1(true), 500);
-    setTimeout(() => setDelay2(true), 1000);
-    setTimeout(() => setDelay3(true), 1500);
-    setTimeout(() => setDelay4(true), 2000);
-    setTimeout(() => setDelay5(true), 2500);
-    setTimeout(() => setDelay6(true), 3000);
-    setTimeout(() => setDelay7(true), 3500);
+    setTimeout(() => setDelay1(true), 100);
+    setTimeout(() => setDelay2(true), 300);
+    setTimeout(() => setDelay3(true), 600);
+    setTimeout(() => setDelay4(true), 900);
+    setTimeout(() => setDelay5(true), 1200);
+    setTimeout(() => setDelay6(true), 1500);
+    setTimeout(() => setDelay7(true), 1800);
   }, []);
 
   return (
