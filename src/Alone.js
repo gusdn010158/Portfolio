@@ -3,7 +3,7 @@ import Top from "./Top";
 import styled from "styled-components";
 import Intro from "./Intro";
 import "./Star.css";
-
+import { Link } from "react-router-dom";
 function Alone(props) {
   const [visibleStates, setVisibleStates] = useState([]);
   const targetsRef = useRef([]);
@@ -50,7 +50,9 @@ function Alone(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            오늘의 집 클론 사이트
+            <Link to="https://tmdb-dlgusdns-projects.vercel.app/">
+              오늘의 집 클론 사이트
+            </Link>
           </div>
           <div
             className={`d2 ${visibleStates[1] ? "o" : ""}`}
@@ -110,7 +112,10 @@ function Alone(props) {
               src="https://flexible.img.hani.co.kr/flexible/normal/550/307/imgdb/original/2024/0303/20240303501097.jpg"
               alt="1"
             />
-            스타벅스 클론 사이트
+
+            <Link to="https://starbucks-git-master-dlgusdns-projects.vercel.app/">
+              스타벅스 클론 사이트
+            </Link>
           </div>
         </PPin>
       </PP>
