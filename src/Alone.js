@@ -50,9 +50,7 @@ function Alone(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            <Link to="https://tmdb-dlgusdns-projects.vercel.app/">
-              오늘의 집 클론 사이트
-            </Link>
+            <Link to="/">오늘의 집 클론 사이트</Link>
           </div>
           <div
             className={`d2 ${visibleStates[1] ? "o" : ""}`}
@@ -129,7 +127,7 @@ function Alone(props) {
               src="https://amunt.kr/files/attach/images/856721/340/874/e0b2c13a73c98afc8d004b982b9bb802.jpg"
               alt="1"
             />
-            티켓팅 사이트
+            <Link to="/"> 티켓팅 사이트</Link>
           </div>
           <div
             className={`did2 ${visibleStates[5] ? "a" : ""}`}
@@ -154,6 +152,27 @@ function Alone(props) {
             속도를 최적화하고 SEO를 향상시켰습니다. - Next.js의
             `getServerSideProps`를 사용하여 페이지 로드 시 데이터를 미리
             가져왔습니다.
+          </div>
+        </PPin>
+      </PP>
+      <PP>
+        <PPin>
+          <div
+            className={`didi ${visibleStates[6] ? "q" : ""}`}
+            ref={(el) => (targetsRef.current[6] = el)}
+          >
+            TMDB사이트
+          </div>
+          <div
+            className={`didi2 ${visibleStates[7] ? "q" : ""}`}
+            ref={(el) => (targetsRef.current[7] = el)}
+          >
+            <Pimg
+              src="https://flexible.img.hani.co.kr/flexible/normal/550/307/imgdb/original/2024/0303/20240303501097.jpg"
+              alt="1"
+            />
+
+            <Link to="https://tmdb-dun.vercel.app/">TMDB</Link>
           </div>
         </PPin>
       </PP>

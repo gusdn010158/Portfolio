@@ -3,7 +3,7 @@ import Top from "./Top";
 import styled from "styled-components";
 import Intro from "./Intro";
 import "./Star.css";
-
+import { Link } from "react-router-dom";
 function Collabo(props) {
   const [visibleStates, setVisibleStates] = useState([]);
   const targetsRef = useRef([]);
@@ -61,7 +61,7 @@ function Collabo(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            SWS
+            <Link to="https://sws-frontend-theta.vercel.app/"> SWS</Link>
           </div>
         </PPin>
       </PP>
@@ -75,7 +75,8 @@ function Collabo(props) {
               src="https://elearningindustry.com/wp-content/uploads/2023/06/4-Caveats-For-LD-Professionals-When-Using-Chat-GPT.jpg"
               alt="1"
             />
-            MOMUKG
+
+            <Link to="https://momukg-front.vercel.app/">MOMUKG</Link>
           </div>
           <div
             className={`di2 ${visibleStates[3] ? "t" : ""}`}
@@ -126,7 +127,9 @@ function Collabo(props) {
               src="https://cdn.mediatoday.co.kr/news/photo/202210/306491_419306_625.png"
               alt="1"
             />
-            헬린이 쇼핑몰
+            <Link to="https://health-three-pearl.vercel.app/">
+              헬린이 쇼핑몰
+            </Link>
           </div>
         </PPin>
       </PP>
