@@ -50,7 +50,9 @@ function Alone(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            <Link to="/">오늘의 집 클론 사이트</Link>
+            <Link to="https://testnext-jet.vercel.app/">
+              오늘의 집 클론 사이트
+            </Link>
           </div>
           <div
             className={`d2 ${visibleStates[1] ? "o" : ""}`}
@@ -127,7 +129,7 @@ function Alone(props) {
               src="https://amunt.kr/files/attach/images/856721/340/874/e0b2c13a73c98afc8d004b982b9bb802.jpg"
               alt="1"
             />
-            <Link to="/"> 티켓팅 사이트</Link>
+            <Link to="https://nextts-ivory.vercel.app/"> 티켓팅 사이트</Link>
           </div>
           <div
             className={`did2 ${visibleStates[5] ? "a" : ""}`}
