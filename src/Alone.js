@@ -50,7 +50,7 @@ function Alone(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            <Link to="https://testnext-jet.vercel.app/">
+            <Link className="lind" to="https://testnext-jet.vercel.app/">
               오늘의 집 클론 사이트
             </Link>
           </div>
@@ -113,7 +113,10 @@ function Alone(props) {
               alt="1"
             />
 
-            <Link to="https://starbucks-git-master-dlgusdns-projects.vercel.app/">
+            <Link
+              className="lind"
+              to="https://starbucks-git-master-dlgusdns-projects.vercel.app/"
+            >
               스타벅스 클론 사이트
             </Link>
           </div>
@@ -129,7 +132,10 @@ function Alone(props) {
               src="https://amunt.kr/files/attach/images/856721/340/874/e0b2c13a73c98afc8d004b982b9bb802.jpg"
               alt="1"
             />
-            <Link to="https://nextts-ivory.vercel.app/"> 티켓팅 사이트</Link>
+            <Link className="lind" to="https://nextts-ivory.vercel.app/">
+              {" "}
+              티켓팅 사이트
+            </Link>
           </div>
           <div
             className={`did2 ${visibleStates[5] ? "a" : ""}`}
@@ -163,7 +169,25 @@ function Alone(props) {
             className={`didi ${visibleStates[6] ? "q" : ""}`}
             ref={(el) => (targetsRef.current[6] = el)}
           >
-            TMDB사이트
+            TMDB사이트 티켓팅 사이트 프로젝트 이번 프로젝트는 티켓팅 사이트를
+            클론 코딩한 프로젝트입니다. 이 프로젝트를 통해 다양한 웹 기술을
+            배우고 활용할 수 있었습니다. ![Project
+            Screenshot](link-to-screenshot.png) ## 프로젝트 개요 이 프로젝트는
+            사용자가 다양한 이벤트 티켓을 쉽게 검색하고 구매할 수 있도록 하는
+            것을 목표로 합니다. Next.js와 Redux를 사용하여 효율적인 상태 관리를
+            구현하였습니다. ## 사용 기술 스택 - **Frontend**: Next.js, React,
+            Redux, styled-components, JavaScript - **Backend**: Node.js, Express
+            - **Database**: MongoDB - **Others**: Vercel for deployment, Jest
+            for testing ## 주요 기능 - **홈 페이지**: 최신 이벤트와 인기 티켓을
+            한 눈에 볼 수 있습니다. - **검색 기능**: 사용자가 원하는 이벤트를
+            쉽게 찾을 수 있습니다. - **티켓 상세 페이지**: 각 이벤트 티켓에 대한
+            상세 정보와 관련 리뷰를 확인할 수 있습니다. - **장바구니 및 결제
+            시스템**: 사용자가 선택한 티켓을 장바구니에 담고 결제할 수 있습니다.
+            - **사용자 인증**: 회원가입, 로그인, 로그아웃 기능을 포함합니다. ##
+            구현 상세 ### 1. Next.js를 사용한 서버사이드 렌더링 (SSR) -
+            서버사이드 렌더링을 통해 초기 로딩 속도를 최적화하고 SEO를
+            향상시켰습니다. - Next.js의 `getServerSideProps`를 사용하여 페이지
+            로드 시 데이터를 미리 가져왔습니다.
           </div>
           <div
             className={`didi2 ${visibleStates[7] ? "q" : ""}`}
@@ -174,7 +198,9 @@ function Alone(props) {
               alt="1"
             />
 
-            <Link to="https://tmdb-dun.vercel.app/">TMDB</Link>
+            <Link className="lind" to="https://tmdb-dun.vercel.app/">
+              TMDB
+            </Link>
           </div>
         </PPin>
       </PP>
@@ -186,7 +212,7 @@ export default Alone;
 const Pimg = styled.img`
   width: 500px;
   height: 500px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 const PP = styled.div`
   height: 100vh;

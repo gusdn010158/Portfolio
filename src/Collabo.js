@@ -61,7 +61,10 @@ function Collabo(props) {
               src="https://cdn.hankyung.com/photo/202005/01.22651863.1.jpg"
               alt="1"
             />
-            <Link to="https://sws-frontend-theta.vercel.app/"> SWS</Link>
+            <Link className="lind" to="https://sws-frontend-theta.vercel.app/">
+              {" "}
+              SWS
+            </Link>
           </div>
         </PPin>
       </PP>
@@ -76,7 +79,9 @@ function Collabo(props) {
               alt="1"
             />
 
-            <Link to="https://momukg-front.vercel.app/">MOMUKG</Link>
+            <Link className="lind" to="https://momukg-front.vercel.app/">
+              MOMUKG
+            </Link>
           </div>
           <div
             className={`di2 ${visibleStates[3] ? "t" : ""}`}
@@ -127,7 +132,7 @@ function Collabo(props) {
               src="https://cdn.mediatoday.co.kr/news/photo/202210/306491_419306_625.png"
               alt="1"
             />
-            <Link to="https://health-three-pearl.vercel.app/">
+            <Link className="lind" to="https://health-three-pearl.vercel.app/">
               헬린이 쇼핑몰
             </Link>
           </div>
@@ -141,7 +146,7 @@ export default Collabo;
 const Pimg = styled.img`
   width: 500px;
   height: 500px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 const PP = styled.div`
   height: 100vh;

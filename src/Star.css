@@ -38,6 +38,7 @@
   opacity: 1;
   left: 5%;
 }
+
 .di {
   position: absolute;
   width: 40%;
@@ -118,4 +119,44 @@
   transition: all 1s;
   right: 10%;
   opacity: 1;
+}
+.didi {
+  position: absolute;
+  width: 40%;
+  left: -40%;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+.didi.q {
+  transition: all 3s;
+  opacity: 1;
+  left: 5%;
+}
+.didi2 {
+  position: absolute;
+  width: 40%;
+  right: 0%;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+.didi2.q {
+  transition: all 1s;
+  right: 15%;
+  opacity: 1;
+}
+.lind {
+  color: #000;
+  text-decoration: none;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
 }
