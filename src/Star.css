@@ -85,7 +85,7 @@
 }
 .d2.o {
   transition: all 1s;
-  right: 15%;
+  right: 0%;
   opacity: 1;
 }
 .di2 {
@@ -117,9 +117,10 @@
 }
 .did2.a {
   transition: all 1s;
-  right: 10%;
+  right: 0%;
   opacity: 1;
 }
+
 .didi {
   position: absolute;
   width: 40%;
@@ -138,7 +139,7 @@
 }
 .didi2 {
   position: absolute;
-  width: 40%;
+  width: 50%;
   right: 0%;
 
   display: flex;
@@ -149,7 +150,7 @@
 }
 .didi2.q {
   transition: all 1s;
-  right: 15%;
+  right: 10%;
   opacity: 1;
 }
 .lind {
@@ -159,4 +160,9 @@
   padding: 20px;
   border-radius: 15px;
   border: 1px solid black;
+}
+.motionimg {
+  width: 50vw;
+  height: 600px;
+  object-fit: cover;
 }

@@ -89,6 +89,7 @@ const Showcom = styled.div`
   display: flex;
   justify-content: center;
   h2 {
+    font-family: Arial, sans-serif;
     font-size: 40px;
     height: 150px;
     margin: 0;

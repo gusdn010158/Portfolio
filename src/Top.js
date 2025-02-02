@@ -35,6 +35,7 @@ const Proicon = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Arial, sans-serif;
 `;
 
 const Prorg = styled(motion.div)`
@@ -46,6 +47,7 @@ const Prorg = styled(motion.div)`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  font-family: Arial, sans-serif;
 `;
 
 const Pro = styled.div`
@@ -60,6 +62,7 @@ const Pro = styled.div`
 const Prospan = styled.span`
   font-size: 130px;
   font-weight: 900;
+  font-family: Arial, sans-serif;
 `;
 
 const Header = styled(motion(Link))`
