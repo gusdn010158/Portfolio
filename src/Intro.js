@@ -46,26 +46,68 @@ function Intro({ sentence }) {
 
   return (
     <ShowMore>
-      <Showcom ref={ref}>
-        <h2>Introduction</h2>
-        <Showdiv
-          as={motion.div}
-          variants={container}
-          initial="hidden"
-          animate={visible ? "visible" : "hidden"}
+      <Content>
+        <motion.h2
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
         >
-          {sentence.split("").map((char, index) => (
-            <motion.span key={index} variants={child}>
-              {char}
-            </motion.span>
-          ))}
-        </Showdiv>
-      </Showcom>
+          Introduction
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <strong>[첫인상을 주는 프론트엔드]</strong>
+          학부생 시절 PHP, JSP, Express, React를 활용한 웹 개발 경험이 있으며,
+          사용자에게 먼저 보여지는 프론트엔드에 흥미를 느껴 프론트엔드에
+          집중하고 있습니다.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <strong>[성장에 대한 즐거움]</strong>
+          새로운 프로젝트를 시작할 때마다, 단순히 이전에 사용하던 기술을
+          활용하는 것이 아닌, 이전 프로젝트에서 아쉬웠던 부분을 개선하고 새로운
+          코드 스타일이나 기술을 적용하는 것에 큰 즐거움을 느낍니다. 이는 개발에
+          있어서의 성장을 위한 동력이 되어주고 있습니다.
+        </motion.p>
+
+        {/* {sentence.split("").map((char, index) => (
+          <motion.span key={index} variants={child}>
+            {char}
+          </motion.span>
+        ))} */}
+      </Content>
     </ShowMore>
   );
 }
 
 export default Intro;
+const Content = styled.div`
+  flex: 1;
+  max-width: 600px;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00bfff;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  strong {
+    color: #00bfff;
+  }
+`;
 const Showdiv = styled.div`
   width: 1300px;
   font-family: Arial, sans-serif;
@@ -88,6 +130,14 @@ const Showcom = styled.div`
   height: 300px;
   display: flex;
   justify-content: center;
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  strong {
+    color: #00bfff;
+  }
   h2 {
     font-family: Arial, sans-serif;
     font-size: 40px;

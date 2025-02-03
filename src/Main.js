@@ -4,24 +4,52 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Top from "./Top";
 import Intro from "./Intro";
-const skills = [
-  "NEXT.JS",
-  "HTML5",
-  "CSS3",
-  "TYPESCRIPT",
-  "JAVASCRIPT",
-  "REACT",
-  "REDUX",
-  "RECOIL",
-  "REACT HOOK FORM",
-  "FIGMA",
-  "GITHUB",
-  "STYLED COMPONENTS",
-  "Three.js",
-  "Framer-Motion",
-  "Intersection Observer",
-];
+import Introduce from "./Introduce";
+
 function Main(props) {
+  const skills = [
+    {
+      id: 1,
+      name: "NEXT.JS",
+      description: "서버 사이드 렌더링을 지원하는 React 프레임워크",
+    },
+    {
+      id: 2,
+      name: "HTML5",
+      description: "웹 페이지 구조를 만드는 마크업 언어",
+    },
+    {
+      id: 3,
+      name: "CSS3",
+      description: "웹 디자인 및 스타일을 적용하는 스타일링 언어",
+    },
+    {
+      id: 4,
+      name: "TYPESCRIPT",
+      description: "정적 타입을 지원하는 자바스크립트의 확장판",
+    },
+    {
+      id: 5,
+      name: "JAVASCRIPT",
+      description: "웹 개발에서 가장 널리 사용되는 프로그래밍 언어",
+    },
+    { id: 6, name: "REACT", description: "" },
+    { id: 7, name: "REDUX", description: "" },
+    { id: 8, name: "RECOIL", description: "" },
+    { id: 9, name: "REACT HOOK FORM", description: "" },
+    { id: 10, name: "FIGMA", description: "" },
+    { id: 11, name: "GITHUB", description: "" },
+    { id: 12, name: "STYLED COMPONENTS", description: "" },
+    { id: 13, name: "Framer-Motion", description: "" },
+    { id: 14, name: "Intersection Observer", description: "" },
+    { id: 15, name: "Vercel", description: "" },
+  ];
+
+  const [selectedId, setSelectedId] = useState(null);
+
+  const toggleDescription = (id) => {
+    setSelectedId(selectedId === id ? null : id);
+  };
   const [visible, setVisible] = useState(false);
   const [skillsVisible, setSkillsVisible] = useState(false);
   const ref = useRef(null);
@@ -69,8 +97,6 @@ function Main(props) {
     };
   }, []);
 
-  const sentence2 =
-    "안녕하세요, 저는 UI/UX을 최적화하고, 효율적이고 아름다운 웹애플리케이션을 구축하는 프론트엔드 개발 지원자입니다. 다양한 기술 스택을 활용하여 복잡한 문제를 창의적으로 해결하는데 많은 노력을 합니다. 또한, 최신 웹 개발 트렌드와 도구를 빠르게 습득하고 적용하는능력이 강점입니다.저는 협업과 소통을 중요하게 생각하며, 다양한 팀 프로젝트를 통해효과적으로 협력한 경험이 있습니다. 경험을 통해 프로젝트의 목표를 명확히 이해하고, 최고의 결과물을도출하기 위해 노력해왔습니다. 혁신적인 프로젝트와 함께 성장하며, 사용자에게 최고의 경험을 제공하는 데 기여하고 싶습니다.";
   const title = "PORTFOLIO";
   const sentence = "Do you:want to:see more?";
   const words = sentence.split(":");
@@ -94,64 +120,88 @@ function Main(props) {
     },
   };
 
-  ///////////////////////////////////////
-  const containerVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 1,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <div>
       <Top title={title} />
-      <Intro sentence={sentence2} />
+      <Introduce />
       <Intr ref={ref}>
-        <Intext
-          as={motion.div}
-          variants={container}
-          initial="hidden"
-          animate={visible ? "visible" : "hidden"}
+        <motion.div
+          drag
+          dragConstraints={{ left: -900, right: 500, top: -400, bottom: 350 }}
+          style={{
+            width: "750px",
+            height: "650px",
+            backgroundColor: "#fff",
+            borderRadius: "15%",
+            mixBlendMode: "difference",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-120%, -60%)",
+          }}
         >
-          {words.map((word, index) => (
-            <motion.span key={index} variants={child}>
-              {word}
-            </motion.span>
-          ))}
-        </Intext>
+          <Intext
+            as={motion.div}
+            variants={container}
+            initial="hidden"
+            animate={visible ? "visible" : "hidden"}
+          >
+            {words.map((word, index) => (
+              <motion.span key={index} variants={child}>
+                {word}
+              </motion.span>
+            ))}
+          </Intext>
+        </motion.div>
       </Intr>
-      <Skill ref={skillRef}>
-        <SkillTitle as={motion.h2} variants={itemVariants}>
-          MY SKILLS
-        </SkillTitle>
-        <SkillContainer
-          as={motion.div}
-          initial="hidden"
-          animate={skillsVisible ? "visible" : "hidden"}
-          variants={containerVariants}
-        >
-          {skills.map((skill, index) => (
-            <SkillItem key={index} as={motion.div} variants={itemVariants}>
-              {skill}
-            </SkillItem>
-          ))}
-        </SkillContainer>
-      </Skill>
-      <HeroSection>
+
+      <Container>
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1 }}
+        >
+          My Skill
+        </motion.h1>
+
+        <ProjectGrid>
+          {skills.map((skill) => (
+            <div key={skill.id} style={{ width: "100%" }}>
+              <motion.div
+                className="project-card"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: skill.id * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => toggleDescription(skill.id)}
+              >
+                {skill.name}
+              </motion.div>
+
+              {/* 설명 박스 (선택된 항목 아래에서 나타남) */}
+              {selectedId === skill.id && (
+                <motion.div
+                  className="description-box"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {skill.description}
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </ProjectGrid>
+      </Container>
+
+      <HeroSection>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Link className="linkhero" to="/Collabo">
             그룹 프로젝트로
@@ -163,6 +213,44 @@ function Main(props) {
 }
 
 export default Main;
+
+const Container = styled.div`
+  text-align: center;
+  padding: 50px;
+  background: #111;
+  color: white;
+`;
+
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+
+  .project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: white;
+    &:hover {
+      background: #333;
+    }
+  }
+
+  .description-box {
+    background: rgba(17, 16, 16, 0.1);
+    margin-top: 10px;
+    padding: 30px 0px 30px 0px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+`;
+
 const HeroSection = styled.section`
   height: 100vh;
   display: flex;
@@ -189,6 +277,7 @@ const Intext = styled.div`
   font-weight: 900;
   font-family: Arial, sans-serif;
   display: flex;
+
   justify-content: center;
   flex-wrap: wrap;
 `;
@@ -197,44 +286,23 @@ const Component = styled.div`
   height: 100vh;
   width: 99vw;
 `;
-const Skill = styled(Component)`
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
 
 const Intr = styled(Component)`
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  background-image: url("https://img.lovepik.com/bg/20240506/Stunning-3D-Render-Background-of-Web-Design-Screen-on-Laptop_9879317_wh860.jpg!/fw/860");
-`;
-const SkillContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: #f0f0f0;
-  border-radius: 10px;
-  width: 700px;
-  margin: 0 auto;
-  height: 400px;
-  flex-wrap: wrap;
-`;
+  height: 100vh;
+  background-color: #000; // 검정색 배경
+  position: relative;
+  overflow: hidden;
 
-const SkillTitle = styled.h2`
-  font-size: 52px;
-  font-family: Arial, sans-serif;
-  color: 0;
-  margin: 0;
-`;
-
-const SkillItem = styled.div`
-  margin: 5px 0;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  color: #555;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-image: url("https://img.lovepik.com/bg/20240506/Stunning-3D-Render-Background-of-Web-Design-Screen-on-Laptop_9879317_wh860.jpg!/fw/860");
+  }
 `;

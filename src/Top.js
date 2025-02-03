@@ -12,7 +12,7 @@ const Component = styled.div`
   position: relative;
   overflow: hidden;
   height: 100vh;
-  background: #000;
+  background: #111;
 `;
 
 const StyledCanvas = styled(Canvas)`
