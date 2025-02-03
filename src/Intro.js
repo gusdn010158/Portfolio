@@ -108,11 +108,7 @@ const Content = styled.div`
     color: #00bfff;
   }
 `;
-const Showdiv = styled.div`
-  width: 1300px;
-  font-family: Arial, sans-serif;
-  font-size: 28px;
-`;
+
 const Component = styled.div`
   height: 100vh;
   width: 99vw;
@@ -123,26 +119,4 @@ const ShowMore = styled(Component)`
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gray;
-`;
-
-const Showcom = styled.div`
-  width: 1800px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  strong {
-    color: #00bfff;
-  }
-  h2 {
-    font-family: Arial, sans-serif;
-    font-size: 40px;
-    height: 150px;
-    margin: 0;
-    margin-right: 80px;
-  }
 `;
