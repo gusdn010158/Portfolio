@@ -68,7 +68,7 @@ function Intro({ sentence }) {
 export default Intro;
 const Showdiv = styled.div`
   width: 1300px;
-
+  font-family: Arial, sans-serif;
   font-size: 28px;
 `;
 const Component = styled.div`

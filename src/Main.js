@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 import Top from "./Top";
 import Intro from "./Intro";
 const skills = [
@@ -102,7 +102,7 @@ function Main(props) {
       scale: 1,
       transition: {
         delayChildren: 1,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -147,16 +147,47 @@ function Main(props) {
           ))}
         </SkillContainer>
       </Skill>
+      <HeroSection>
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <Link className="linkhero" to="/Collabo">
+            그룹 프로젝트로
+          </Link>
+        </motion.h1>
+      </HeroSection>
     </div>
   );
 }
 
 export default Main;
-
+const HeroSection = styled.section`
+  height: 100vh;
+  display: flex;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-size: 40px;
+  .linkhero {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    &:hover {
+      color: gray;
+    }
+  }
+`;
 const Intext = styled.div`
   width: 750px;
-  font-size: 150px;
+  font-size: 130px;
   font-weight: 900;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -196,6 +227,7 @@ const SkillContainer = styled.div`
 
 const SkillTitle = styled.h2`
   font-size: 52px;
+  font-family: Arial, sans-serif;
   color: 0;
   margin: 0;
 `;
@@ -203,5 +235,6 @@ const SkillTitle = styled.h2`
 const SkillItem = styled.div`
   margin: 5px 0;
   font-size: 18px;
+  font-family: Arial, sans-serif;
   color: #555;
 `;

@@ -257,28 +257,31 @@ const projects = [
     id: 1,
     img: todayhome,
     title: "오늘의 집 클론사이트",
-    description: "설명 1",
+    description:
+      " 오늘의 집 클론 프로젝트 이번 프로젝트는 '오늘의 집'을 클론 코딩한프로젝트입니다. 이 프로젝트를 통해 다양한 웹 기술을 배우고 활용할수 있었습니다. ![Project Screenshot](link-to-screenshot.png) ##프로젝트 개요 '오늘의 집'은 인테리어와 라이프스타일을 공유하는플랫폼입니다. 이 프로젝트는 사용자들이 다양한 인테리어 아이디어를보고, 필요한 제품을 구매할 수 있는 기능을 제공합니다. ## 사용 기술스택 - **Frontend**: Next.js, React, Redux, styled-components -**Backend**: Node.js, Express - **Database**: MongoDB -**Others**: Vercel for deployment, Jest for testing ## 주요 기능 -**홈 페이지**: 최신 인테리어 트렌드와 인기 제품을 한 눈에 볼 수있습니다. - **검색 기능**: 사용자가 원하는 제품을 쉽게 찾을 수있습니다. - **상품 상세 페이지**: 각 상품에 대한 상세 정보와 관련리뷰를 확인할 수 있습니다. - **장바구니 및 결제 시스템**: 사용자가선택한 제품을 장바구니에 담고 결제할 수 있습니다. - **사용자 인증**: 회원가입, 로그인, 로그아웃 기능을 포함합니다. ## 구현 상세### 1. 캐러셀 기능 - 다양한 인테리어 이미지들을 슬라이드 형식으로보여줍니다. - React-slick 라이브러리를 사용하여 부드러운 전환효과를 구현했습니다.",
     link: "https://testnext-jet.vercel.app/",
   },
   {
     id: 2,
     img: starbuck,
     title: "스타벅스 클론 사이트",
-    description: "설명 2",
+    description:
+      "스타벅스 클론 프로젝트 이번 프로젝트는 '스타벅스' 웹사이트를 클론코딩한 프로젝트입니다. 이 프로젝트를 통해 다양한 웹 기술을 배우고 활용할 수 있었습니다. ![ProjectScreenshot](link-to-screenshot.png) ## 프로젝트 개요 '스타벅스'웹사이트는 깔끔한 디자인과 다양한 상호작용을 제공하는 인터페이스로유명합니다. 이 프로젝트에서는 그 중에서도 스크롤 애니메이션과사용자 상호작용을 중점적으로 구현했습니다. ## 사용 기술 스택 -**Frontend**: Next.js, React, Redux, styled-components, JavaScript- **Backend**: Node.js, Express - **Database**: MongoDB - **Others**: Vercel for deployment, Jest for testing ## 주요 기능 -**홈 페이지**: 스타벅스의 최신 프로모션과 인기 메뉴를 보여줍니다.- **메뉴 페이지**: 다양한 음료와 푸드를 카테고리별로 볼 수있습니다. - **상세 페이지**: 각 메뉴의 상세 정보를 확인할 수있습니다. - **장바구니 및 주문 시스템**: 사용자가 선택한 메뉴를장바구니에 담고 주문할 수 있습니다. - **사용자 인증**: 회원가입,로그인, 로그아웃 기능을 포함합니다. ## 구현 상세 ### 1.Intersection Observer를 사용한 스크롤 애니메이션 - 특정 섹션이 화면에 들어올 때 애니메이션 효과를 주기 위해 Intersection ObserverAPI를 사용했습니다. - 스크롤 시 자연스러운 애니메이션 전환을구현했습니다.",
     link: "https://starbucks-git-master-dlgusdns-projects.vercel.app/",
   },
   {
     id: 3,
     img: ticket,
     title: "티켓팅 사이트",
-    description: "설명 3",
+    description:
+      "티켓팅 사이트 프로젝트 이번 프로젝트는 티켓팅 사이트를 클론 코딩한프로젝트입니다. 이 프로젝트를 통해 다양한 웹 기술을 배우고 활용할수 있었습니다. ![Project Screenshot](link-to-screenshot.png) ##프로젝트 개요 이 프로젝트는 사용자가 다양한 이벤트 티켓을 쉽게검색하고 구매할 수 있도록 하는 것을 목표로 합니다. Next.js와Redux를 사용하여 효율적인 상태 관리를 구현하였습니다. ## 사용 기술스택 - **Frontend**: Next.js, React, Redux, styled-components,JavaScript - **Backend**: Node.js, Express - **Database**: MongoDB**Others**: Vercel for deployment, Jest for testing ## 주요 기능**홈 페이지**: 최신 이벤트와 인기 티켓을 한 눈에 볼 수 있습니다.**검색 기능**: 사용자가 원하는 이벤트를 쉽게 찾을 수 있습니다. -**티켓 상세 페이지**: 각 이벤트 티켓에 대한 상세 정보와 관련리뷰를 확인할 수 있습니다. - **장바구니 및 결제 시스템**: 사용자가선택한 티켓을 장바구니에 담고 결제할 수 있습니다. - **사용인증**: 회원가입, 로그인, 로그아웃 기능을 포함합니다. ## 구현 상세### 1. Next.js를 사용한 서버사이드 렌더링 (SSR) - 서버사이드렌더링을 통해 초기 로딩 속도를 최적화하고 SEO를 향상시켰습니다. -Next.js의 `getServerSideProps`를 사용하여 페이지 로드 시 데이터를미리 가져왔습니다.",
     link: "https://nextts-ivory.vercel.app/",
   },
   {
     id: 4,
     img: tmdb,
     title: "TMDB",
-    description: "설명 3",
+    description: "TMDB사이트",
     link: "https://tmdb-dun.vercel.app/",
   },
 ];
