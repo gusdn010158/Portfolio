@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-function Intro() {
+function Introt() {
   return (
     <ShowMore>
       <Content>
@@ -18,12 +18,12 @@ function Intro() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <strong>[팀 프로젝트 경험]</strong>
-            학부 시절 제가 참여했던 팀 프로젝트의 경험과 느낀 점을 기록한
-            페이지입니다. 이 프로젝트들은 다양한 프론트엔드, 백엔드 개발자 및
-            디자이너와 협력하여 완성되었습니다. 이러한 협업을 통해 저는 단순한
-            개발 기술을 넘어 원활한 소통과 커뮤니케이션의 중요성을 깊이
-            깨달았습니다.
+            <strong>[개인 프로젝트 경험]</strong>
+            제가 개인적으로 진행했던 프로젝트들을 소개하는 페이지입니다. 흥미를
+            느껴 배웠던 기술을 직접 활용해보고 싶어서 시작한 프로젝트들로
+            구성되어 있습니다. 각 프로젝트에서는 HTML, CSS, JavaScript, React 등
+            다양한 프론트엔드 기술을 활용하여 효율적인 개발 및 상태 관리를
+            경험할 수 있었습니다.
           </motion.p>
 
           <motion.p
@@ -31,11 +31,13 @@ function Intro() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            각각의 아이디어와 관점을 조화롭게 결합하는 과정에서 창의성과 문제
-            해결 능력을 더욱 발전시킬 수 있었습니다. 이를 통해 프로젝트의 성공을
-            이끌어내는 데 필요한 협력의 가치를 실감할 수 있었습니다.{" "}
-            <strong>팀워크</strong> 를 통해 최상의 결과물을 만들어 내는 과정이
-            저에게 큰 의미가 있었습니다.
+            이러한 개인 프로젝트를 진행하면서 다양한 기술을 탐구하고 적용하는
+            과정에서, 구글링을 통한 문제 해결 능력과 여러 라이브러리를
+            효율적으로 사용하는 방법을 익히게 되었습니다. 스스로 원하는
+            프로젝트를 수행하다 보니 자연스럽게 새로운 도구와 기술을 적용하는 데
+            자신감을 얻었습니다. 저는 프론트엔드 개발자로서 이러한 경험을
+            바탕으로 더욱 창의적이고 효율적인 웹 솔루션을 제공할 수 있는 역량을
+            갖추고 있습니다.
           </motion.p>
         </Modiv>
       </Content>
@@ -43,7 +45,7 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default Introt;
 const Modiv = styled.div`
   width: 1000px;
 `;

@@ -42,22 +42,21 @@ const StyledButton = styled.button`
   font-size: 16px;
   color: white;
   margin: 10px;
-  background-color: #2d9cdb; // 기본 버튼 배경색
+  background-color: #2d9cdb;
   border: none;
-  border-radius: 5px; // 둥근 형태로 디자인
+  border-radius: 5px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   outline: none;
   cursor: pointer;
   font-weight: 600;
-  text-transform: uppercase; // 버튼 텍스트 대문자로
-  letter-spacing: 1px; // 텍스트 간격 조정
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 
   &:focus {
     outline: none;
   }
 
-  // 모던하고 깔끔한 스타일
   display: inline-block;
   transform: translateZ(0);
   user-select: none;

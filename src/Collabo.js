@@ -15,36 +15,36 @@ const projects = [
     img: momukg,
     title: "MOMUKG",
     description:
-      "챗지피티 통합 티켓팅 사이트 프로젝트 이번 프로젝트는 백엔드와의 통신을 통해 챗지피티 API를 통합한 티켓팅 사이트를 클론 코딩한 프로젝트입니다. 이 프로젝트를 통해 다양한 웹 기술을 배우고 활용할 수있었습니다. ![Project Screenshot](link-to-screenshot.png) ##프로젝트 개요 이 프로젝트는 사용자가 다양한 이벤트 티켓을 검색하고구매할 수 있는 기능을 제공하며, 챗지피티 API를 통합하여 사용자가질문을 하고 답변을 받을 수 있는 기능을 포함합니다. 또한, 사용자가챗지피티에서 검색한 내용을 마이페이지에서 확인할 수 있습니다. ##사용 기술 스택 - **Frontend**: Next.js, React, Redux,styled-components, JavaScript - **Backend**: Node.js, Express -**Database**: MongoDB - **Others**: Vercel for deployment, Jest fortesting, OpenAI GPT-3 API ## 주요 기능 - **홈 페이지**: 최신이벤트와 인기 티켓을 한 눈에 볼 수 있습니다. - **검색 기능**:사용자가 원하는 이벤트를 쉽게 찾을 수 있습니다. - **티켓 상세페이지**: 각 이벤트 티켓에 대한 상세 정보와 관련 리뷰를 확인할 수있습니다. - **장바구니 및 결제 시스템**: 사용자가 선택한 티켓을장바구니에 담고 결제할 수 있습니다. - **챗지피티 통합**: 사용자가챗지피티 API를 통해 질문을 하고 답변을 받을 수 있습니다. - **마이페이지**: 사용자가 챗지피티에서 검색한 내용을 확인할 수있습니다. - **사용자 인증**: 회원가입, 로그인, 로그아웃 기능을포함합니다. ## 구현 상세 ### 1. Next.js를 사용한 서버사이드 렌더링 (SSR) - 서버사이드 렌더링을 통해 초기 로딩 속도를 최적화하고 SEO를  향상시켰습니다. - Next.js의 `getServerSideProps`를 사용하여 페이지            로드 시 데이터를 미리 가져왔습니다.",
+      "학교 주변의 맛집을 쉽게 찾을 수 있도록 만든 웹사이트입니다.ChatGPT API를 활용하여 사용자가 원하는 맛집을 추천받을 수 있도록 구현했습니다.이 프로젝트는 백엔드 개발자 및 다른 프론트엔드 개발자와 협업하여 로그인/회원가입 기능을 구축한 협업 프로젝트입니다.또한, 사용자가 검색한 맛집 정보를 마이페이지에 저장할 수 있도록 백엔드와 데이터를 연동했습니다.",
     link: "https://momukg-front.vercel.app/",
-    dydir: "React로 만든 챗지피티 통합 티켓팅 사이트 프로젝트입니다.",
+    dydir:
+      "React로 만든 사이트로로 학교 주변의 맛집을 쉽게 찾을 수 있도록 만든 웹사이트입니다.ChatGPT API를 활용하여 사용자가 원하는 맛집을 추천받을 수 있도록 구현했습니다.",
   },
   {
     id: 2,
     img: hell,
     title: "헬린이 쇼핑몰",
     description:
-      " 이번 사이트는 협업 프로젝트로서 운동을 처음 시작하는 사람들을 위한커뮤니티, 헬스 용품 쇼핑 사이트입니다. 여기는 처음으로 협업을 했던사이트고 figma로 웹 디자이너와 함께 한 프로젝트입니다.",
+      "운동을 처음 시작하는 사람들을 위한 커뮤니티 & 헬스 용품 쇼핑몰입니다.이 프로젝트는 첫 번째 협업 프로젝트로, 웹 디자이너를 꿈꾸는 학부생과 함께 Figma를 활용하여 UI/UX 디자인을 기획했습니다.주요 기능`json-server`를 활용한 CRUD 구현글쓰기 & 댓글 기능을 효율적으로 컴포넌트화, 쇼핑몰에서 다양한 제품을 확인하고 구매할 수 있는 기능을 구현해보았습니다.",
     link: "https://health-three-pearl.vercel.app/",
-    dydir: "React로 만든 운동 초보자를 위한 쇼핑몰 및 커뮤니티 사이트입니다.",
+    dydir:
+      "React로 만든 사이트로 운동을 처음 시작하는 사람들을 위한 커뮤니티 & 헬스 용품 쇼핑몰입니다.",
   },
   {
     id: 3,
     img: sws,
     title: "SWS",
     description:
-      "sws는 shall we study라는 약어로 같이 공부할 친구와 중간에 있는 도서관을 찾아서 공부할수있게 만드는 사이트입니다. 이 사이트는중간지점 도서관을 찾거나 전체 도서관 관련에 대해서 볼수있고 같이 공부할 친구를 찾을수있는 커뮤니티 기능을 가지고 있습니다.",
+      "함께 공부할 친구를 찾고, 중간 지점의 도서관을 추천받을 수 있는 웹사이트입니다.이 프로젝트에서는 페이지네이션, 반응형 캐러셀, 카카오 지도 API 연동 등 다양한 기능을 적용했습니다.또한, 백엔드와 협업하여 회원가입, 로그인, 마이페이지, 친구 추가/삭제 기능, 댓글 & 대댓글, 글쓰기 기능을 구현했습니다. 주요 기능으론 원하는 지역의 도서관 검색 & 중간 지점 도서관 추천공부할 친구를 찾을 수 있는 커뮤니티 기능 반응형 디자인 & 페이지네이션 적용기능들을 구현했습니다.",
     link: "https://sws-frontend-theta.vercel.app/",
     dydir:
-      "React로 만든 도서관을 찾아 같이 공부할 친구를 구할 수 있는 사이트입니다.",
+      "React로 만든 사이트로 함께 공부할 친구를 찾고, 중간 지점의 도서관을 추천받을 수 있는 웹사이트입니다.",
   },
 ];
 
 const Collabo = () => {
   const [scrollY, setScrollY] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
-  const sentence =
-    "이 페이지는 제가 참여했던 팀 프로젝트의 경험과 느낀 점을 기록한 페이지입니다. 이 프로젝트들은 다양한 프론트엔드, 백엔드 개발자 및 디자이너 등 여러 분야의 전문가들과 협력하여 완성되었습니다. 이러한 협업을 통해 저는 단순한 개발 기술을 넘어, 원활한 소통과 커뮤니케이션의 중요성을 깊이 깨달았습니다. 각각의 아이디어와 관점을 조화롭게 결합하는 과정에서, 창의성과 문제 해결 능력을 더욱 발전시킬 수 있었습니다. 이를 통해 프로젝트의 성공을 이끌어내는 데 필요한 협력의 가치를 실감할 수 있었습니다.";
   const title = "Team Project";
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +59,7 @@ const Collabo = () => {
   return (
     <Container>
       <Top title={title} />
-      <Intro sentence={sentence} />
+      <Intro />
       <NavBar
         style={{ background: `rgba(0, 0, 0, ${Math.min(scrollY / 500, 0.8)})` }}
       ></NavBar>
@@ -151,11 +151,13 @@ const MLink = styled(Link)`
   margin: 10px;
   padding: 16px 32px;
   font-size: 16px;
-
+  font-weight: 800;
   border-radius: 5px;
   background-color: gray;
+  transition: all 0.5s ease;
   &:hover {
-    background-color: black;
+    background-color: white;
+    color: gray;
   }
 `;
 const Container = styled.div`
@@ -187,6 +189,7 @@ const HeroSection = styled.section`
     text-decoration: none;
     color: white;
     font-size: 50px;
+    transition: all 0.5s ease;
     &:hover {
       color: black;
     }
@@ -242,6 +245,7 @@ const PopupContent = styled(motion.div)`
 
 const CloseButton = styled.button`
   position: absolute;
+  color: white;
   top: 10px;
   right: 10px;
   background: none;
