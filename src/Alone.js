@@ -89,7 +89,10 @@ const Alone = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img src={project.img} alt="img" />
+            <Link to={project.link}>
+              <img src={project.img} alt="img" />
+            </Link>
+
             <RIGHT>
               <motion.h2
                 initial={{ opacity: 0, y: -20 }}
