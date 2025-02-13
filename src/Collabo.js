@@ -7,7 +7,7 @@ import hell from "./img/hell.png";
 import momukg from "./img/momukg.png";
 import sws from "./img/sws.png";
 import Intro from "./Intro";
-
+import HeroSection from "./HeroSection";
 import ThreeButton from "./ThreeButton";
 const projects = [
   {
@@ -118,17 +118,7 @@ const Collabo = () => {
           </PopupContent>
         </Popup>
       )}
-      <HeroSection>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <Link className="linkhero" to="/Alone">
-            개인 프로젝트로
-          </Link>
-        </motion.h1>
-      </HeroSection>
+      <HeroSection name="개인 프로젝트로" linkTo="/Alone" />
     </Container>
   );
 };
@@ -176,26 +166,6 @@ const NavBar = styled.nav`
   color: white;
 
   text-align: center;
-`;
-
-const HeroSection = styled.section`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  .linkhero {
-    display: flex;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    color: white;
-    font-size: 50px;
-    transition: all 0.5s ease;
-    &:hover {
-      color: black;
-    }
-  }
 `;
 
 const ProjectSection = styled.section`
