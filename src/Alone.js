@@ -57,27 +57,13 @@ const projects = [
 ];
 
 const Alone = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
   const title = "Private Project";
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <Container>
       <Top title={title} />
       <Introt />
-
-      <NavBar
-        style={{ background: `rgba(0, 0, 0, ${Math.min(scrollY / 500, 0.8)})` }}
-      ></NavBar>
 
       <ProjectSection>
         {projects.map((project, index) => (
