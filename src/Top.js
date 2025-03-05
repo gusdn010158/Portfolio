@@ -79,7 +79,7 @@ const Header = styled(motion(Link))`
 `;
 
 const Logo = styled(Header)`
-  margin-right: 250px;
+  margin-right: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,10 +202,7 @@ function Top({ title }) {
           initial="hidden"
           animate={delay5 ? "visible" : "hidden"}
           variants={fadeInVariants}
-        >
-          <Bigfont>Front-End</Bigfont>
-          <Bigfont> Developer</Bigfont>
-        </Soge>
+        ></Soge>
       </Tope>
       <Pro>
         <Proicon
