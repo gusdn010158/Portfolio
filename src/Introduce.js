@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import Lee from "./img/leehyunwoo.jpg";
+import Lee from "./img/hyunwoo.jpg";
 const Introduce = () => {
   return (
     <Container>
@@ -105,7 +105,7 @@ const ProfileImage = styled.div`
 
   img {
     width: 350px;
-    height: 350px;
+    height: 450px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #00bfff;
