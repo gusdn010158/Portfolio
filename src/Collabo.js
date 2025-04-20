@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+
 import styled from "styled-components";
 import Top from "./Top";
-import { Link } from "react-router-dom";
+
 import hell from "./img/hell.png";
 import momukg from "./img/momukg.png";
 import sws from "./img/sws.png";
 import Intro from "./Intro";
 import HeroSection from "./HeroSection";
-import ThreeButton from "./ThreeButton";
+
+import ProjectCard from "./ProjectCard";
 const projects = [
   {
     id: 1,
@@ -43,172 +44,24 @@ const projects = [
 ];
 
 const Collabo = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
   const title = "Team Project";
 
   return (
     <Container>
       <Top title={title} />
       <Intro />
+      <ProjectCard projects={projects} />
 
-      <ProjectSection>
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="project-card"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -500 : 500 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Link to={project.link}>
-              <img src={project.img} alt="img" />
-            </Link>
-            <RIGHT>
-              <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                {project.title}
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                {project.dydir}
-              </motion.p>
-              <Twobtn>
-                <MLink to={project.link}>사이트 들어가기</MLink>
-
-                <ThreeButton
-                  onClick={() => setSelectedProject(project)}
-                  selcet={"더보기"}
-                />
-              </Twobtn>
-            </RIGHT>
-          </motion.div>
-        ))}
-      </ProjectSection>
-      {selectedProject && (
-        <Popup>
-          <PopupContent
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            <CloseButton onClick={() => setSelectedProject(null)}>
-              ✖
-            </CloseButton>
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-          </PopupContent>
-        </Popup>
-      )}
       <HeroSection name="개인 프로젝트로" linkTo="/Alone" />
     </Container>
   );
 };
 
 export default Collabo;
-const Twobtn = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 100px;
-`;
-const RIGHT = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 700px;
-`;
-const MLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 10px;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 800;
-  border-radius: 5px;
-  background-color: gray;
-  transition: all 0.5s ease;
-  &:hover {
-    background-color: white;
-    color: gray;
-  }
-`;
+
 const Container = styled.div`
   font-family: Arial, sans-serif;
   color: white;
   background: #111;
   min-height: 100vh;
-`;
-
-const NavBar = styled.nav`
-  position: fixed;
-  width: 100%;
-  padding: 15px;
-  color: white;
-
-  text-align: center;
-`;
-
-const ProjectSection = styled.section`
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .project-card {
-    background: #222;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    width: 80%;
-    text-align: center;
-    display: flex;
-  }
-  img {
-    width: 800px;
-    height: 500px;
-    object-fit: contain;
-  }
-`;
-const Popup = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const PopupContent = styled(motion.div)`
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  text-align: center;
-  position: relative;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  color: white;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
 `;
