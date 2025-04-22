@@ -12,8 +12,8 @@ import { IoCallOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-import Introt from "./Introt";
 import ProjectCard from "./ProjectCard";
+import Introduceg from "./Introduceg";
 const projects = [
   {
     id: 1,
@@ -59,11 +59,26 @@ const projects = [
 
 const Alone = () => {
   const title = "Private Project";
+  const text = `  <strong>[개인 프로젝트 경험]</strong>
+            제가 개인적으로 진행했던 프로젝트들을 소개하는 페이지입니다. 흥미를
+            느껴 배웠던 기술을 직접 활용해보고 싶어서 시작한 프로젝트들로
+            구성되어 있습니다. 각 프로젝트에서는 HTML, CSS, JavaScript, React 등
+            다양한 프론트엔드 기술을 활용하여 효율적인 개발 및 상태 관리를
+            경험할 수 있었습니다.`;
 
+  const textwo = ` 이러한 개인 프로젝트를 진행하면서 다양한 기술을 탐구하고 적용하는
+            과정에서, 구글링을 통한 문제 해결 능력과 여러 라이브러리를
+            효율적으로 사용하는 방법을 익히게 되었습니다. 스스로 원하는
+            프로젝트를 수행하다 보니 자연스럽게 새로운 도구와 기술을 적용하는 데
+            자신감을 얻었습니다. 저는 프론트엔드 개발자로서 이러한 경험을
+            바탕으로 더욱 창의적이고 효율적인 웹 솔루션을 제공할 수 있는 역량을
+            갖추고 있습니다.`;
+
+  const Introduction = "Introduction";
   return (
     <Container>
       <Top title={title} />
-      <Introt />
+      <Introduceg title={Introduction} text={text} textwo={textwo} />
 
       <ProjectCard projects={projects} />
 
@@ -118,12 +133,17 @@ const HeroSection = styled.section`
   align-items: center;
   font-size: 2rem;
   font-size: 35px;
-
+  @media (max-width: 1440px) {
+    font-size: 25px;
+  }
   h4 {
     font-family: Arial, sans-serif;
     font-size: 30px;
     display: flex;
     align-items: center;
+    @media (max-width: 1440px) {
+      font-size: 25px;
+    }
   }
   .linkhero {
     display: flex;
@@ -134,6 +154,10 @@ const HeroSection = styled.section`
     font-size: 30px;
 
     transition: all 0.5s ease;
+
+    @media (max-width: 1440px) {
+      font-size: 25px;
+    }
     &:hover {
       color: black;
     }

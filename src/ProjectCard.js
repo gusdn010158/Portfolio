@@ -31,13 +31,13 @@ function ProjectCard({ projects }) {
                 >
                   {project.title}
                 </motion.h2>
-                <motion.p
+                <MotionParagraph
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   {project.dydir}
-                </motion.p>
+                </MotionParagraph>
                 <Twobtn>
                   <MLink to={project.link}>사이트 들어가기</MLink>
 
@@ -81,6 +81,18 @@ const RIGHT = styled.div`
   align-items: center;
   width: 700px;
 `;
+const MotionParagraph = styled(motion.p)`
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-top: 20px;
+  text-align: center;
+  margin: 20px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+`;
+
 const MLink = styled(Link)`
   text-decoration: none;
   color: white;
@@ -117,6 +129,9 @@ const ProjectSection = styled.section`
     width: 800px;
     height: 500px;
     object-fit: contain;
+    @media (max-width: 1440px) {
+      width: 95%;
+    }
   }
 `;
 const Popup = styled.div`

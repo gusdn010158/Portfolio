@@ -78,6 +78,9 @@ const Ttop = styled.div`
   width: 1800px;
   justify-content: space-between;
   padding: 0px 150px 0px 50px;
+  @media (max-width: 1440px) {
+    width: 95%;
+  }
 `;
 const Container = styled.div`
   height: 100vh;

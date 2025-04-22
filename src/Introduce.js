@@ -18,13 +18,14 @@ const Introduce = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <strong>[도전 정신]</strong>안녕하세요, 저는 UI/UX 최적화를 통해
-          효율적이고 아름다운 웹을 구축하는 개발자입니다. 다양한 기술 스택을
-          활용하여 복잡한 문제를 창의적으로 해결하는 데 많은 노력을 기울이고
-          있습니다. 협업과 소통을 중요하게 생각하며, 다양한 팀 프로젝트에서
-          효과적으로 협력한 경험이 있습니다. 프로젝트 목표를 명확히 이해하고,
-          최고의 결과물을 도출하기 위해 끊임없이 노력해왔습니다.{" "}
-          <strong>"일단 해보자"</strong>는 도전 정신이 저의 가장 큰 강점입니다.
+          <strong>[도전 정신]</strong>
+          안녕하세요, 저는 UI/UX 최적화를 통해 효율적이고 아름다운 웹을 구축하는
+          개발자입니다. 다양한 기술 스택을 활용하여 복잡한 문제를 창의적으로
+          해결하는 데 많은 노력을 기울이고 있습니다. 협업과 소통을 중요하게
+          생각하며, 다양한 팀 프로젝트에서 효과적으로 협력한 경험이 있습니다.
+          프로젝트 목표를 명확히 이해하고, 최고의 결과물을 도출하기 위해
+          끊임없이 노력해왔습니다. <strong>"일단 해보자"</strong>는 도전 정신이
+          저의 가장 큰 강점입니다.
         </motion.p>
 
         <motion.p
@@ -60,7 +61,6 @@ const Introduce = () => {
 
 export default Introduce;
 
-// 스타일 정의
 const Container = styled.section`
   border-top: 1px solid gray;
   display: flex;
