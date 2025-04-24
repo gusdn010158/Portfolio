@@ -80,6 +80,9 @@ const GlowingText = styled(motion.h1)`
   font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 1;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 const TechIcons = styled.div`

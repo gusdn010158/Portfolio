@@ -81,6 +81,9 @@ const Ttop = styled.div`
   @media (max-width: 1440px) {
     width: 95%;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const Container = styled.div`
   height: 100vh;
@@ -107,6 +110,10 @@ const Header = styled(motion.header)`
   gap: 20px;
   margin-top: 20px;
   color: white;
+  @media (max-width: 768px) {
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Limg = styled.img`
@@ -117,6 +124,9 @@ const Prospan = styled.span`
   font-size: 130px;
   font-weight: 900;
   font-family: Arial, sans-serif;
+  @media (max-width: 768px) {
+    font-size: 75px;
+  }
 `;
 const Title = styled.h1`
   font-size: 3rem;
@@ -167,6 +177,9 @@ const Icon = styled(motion.div)`
     50% {
       transform: translateY(-20px);
     }
+  }
+  @media (max-width: 768px) {
+    font-size: 100px;
   }
 `;
 

@@ -72,6 +72,8 @@ const Container = styled.section`
   color: white;
 
   @media (max-width: 768px) {
+    padding-right: 30px;
+
     flex-direction: column;
     text-align: center;
   }
@@ -85,6 +87,9 @@ const Content = styled.div`
     font-size: 32px;
     margin-bottom: 20px;
     color: #00bfff;
+    @media (max-width: 768px) {
+      margin-left: 20px;
+    }
   }
 
   p {
@@ -113,6 +118,7 @@ const ProfileImage = styled.div`
 
   @media (max-width: 768px) {
     img {
+      margin-right: 70px;
       width: 200px;
       height: 200px;
     }
