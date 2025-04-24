@@ -133,8 +133,13 @@ const HeroSection = styled.section`
   align-items: center;
   font-size: 2rem;
   font-size: 35px;
+  margin: 0px 20px 0px 20px;
   @media (max-width: 1440px) {
     font-size: 25px;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 20px;
   }
   h4 {
     font-family: Arial, sans-serif;

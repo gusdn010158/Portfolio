@@ -38,15 +38,24 @@ export default Introduceg;
 
 const Modiv = styled.div`
   width: 1000px;
+  @media (max-width: 768px) {
+    max-width: 568px;
+  }
 `;
 const Content = styled.div`
   flex: 1;
   max-width: 1000px;
   display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   h2 {
     font-size: 32px;
     margin-bottom: 20px;
     color: #00bfff;
+    @media (max-width: 768px) {
+      margin-left: 20px;
+    }
   }
 
   p {
@@ -70,4 +79,9 @@ const ShowMore = styled(Component)`
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gray;
+  @media (max-width: 768px) {
+    max-width: 83%;
+    padding-left: 17%;
+    padding-bottom: 30px;
+  }
 `;

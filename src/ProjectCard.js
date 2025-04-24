@@ -73,6 +73,9 @@ const Twobtn = styled.div`
   display: flex;
   align-items: center;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 const RIGHT = styled.div`
   display: flex;
@@ -80,6 +83,10 @@ const RIGHT = styled.div`
   justify-content: center;
   align-items: center;
   width: 700px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const MotionParagraph = styled(motion.p)`
   font-size: 18px;
@@ -124,6 +131,9 @@ const ProjectSection = styled.section`
     height: 500px;
     text-align: center;
     display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   img {
     width: 800px;
@@ -131,6 +141,9 @@ const ProjectSection = styled.section`
     object-fit: contain;
     @media (max-width: 1440px) {
       width: 95%;
+    }
+    @media (max-width: 768px) {
+      height: 250px;
     }
   }
 `;
